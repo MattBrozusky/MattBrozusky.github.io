@@ -1,0 +1,305 @@
+:root {
+    --main-bg: rgb(91 27 78);
+    --main-text: rgb(207 43 0);
+    --extra-color: #fdbb2d;
+}
+
+
+/***************************
+Header Animation Css
+Original design: https://codepen.io/mohaiman/pen/MQqMyo
+***************************/
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Slabo 27px', serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:30vh;
+
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: linear-gradient(to bottom left, #1a237e, #b21f1f, #fdbb2d);
+    width: 100%;
+    height:100vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(-1000px) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(100px) rotate(-720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/***************************
+Page Divider
+***************************/
+.divider-background {
+    height: 15em;
+    margin-top: 2rem;
+}
+
+.divider {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    top: 105px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.divider2 {
+    position: relative;
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+    top: -100px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.divider3 {
+    position: relative;
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+    top: 105px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.divider4 {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    top: -100px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.main-container {
+    overflow-x: hidden;
+}
+
+#about h4 {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
+/***************************
+Rest of Page
+***************************/
+hr {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    z-index: 10;
+    top: -3rem;
+    border: solid 0.5rem #424242;
+}
+
+.wrapper-nav {
+    height: 64px;
+}
+
+.pushpin {
+    z-index: 100;
+}
+
+.pin-top {
+   position: relative;
+}
+
+
+.pin-bottom {
+   position: relative;
+}
+
+
+.pinned {
+   position: fixed !important;
+}
+
+.modal-size {
+    height: 40em;
+    width: 40em;
+}
+
+.x-button {
+    position: absolute;
+    right: 0.1%;
+    top: 0.2%;
+    padding: 0;
+}
+
+.wrap {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0!important;
+    overflow: hidden;
+}
+
+.html-frame {
+    height: 167%;
+    width: 172%;
+    border: 0;
+
+    -ms-transform: scale(0.60);
+    -moz-transform: scale(0.60);
+    -o-transform: scale(0.60);
+    -webkit-transform: scale(0.60);
+    transform: scale(0.60);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.ml-3{
+    margin-left: 1rem;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.btn {
+    border-radius: 0;
+}
+

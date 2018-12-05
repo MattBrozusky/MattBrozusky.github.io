@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matthew Brozusky</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=KoHo|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="personal-site.css">
+</head>
+<body>
+
+    <header id="home">
+        <div class="context">
+            <div class="row">
+                <h1 class="col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4 ">Hello, My Name Is Matthew Brozusky And I'm A Web Developer</h1>
+            </div>
+        </div>
+        <div class="area" >
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="wrapper-nav">
+        <nav class="pushpin">
+            <div class="nav-wrapper grey darken-4">
+                <ul id="nav-mobile" class="left">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <div style="overflow-x: hidden;">
+
+
+        <div class="divider-background" id="about">
+            <section class="divider3 grey darken-3"></section>
+            <h4>About</h4>
+            <section class="divider4 grey darken-3"></section>
+        </div>
+        <div class="container">
+            <section class="row">
+                <article class="col s6">
+
+                </article>
+                <article class="col s6">
+
+                </article>
+            </section>
+        </div>
+
+
+        <div class="divider-background" id="portfolio">
+            <section class="divider grey darken-3"></section>
+            <h4 class="ml-3">Portfolio</h4>
+            <section class="divider2 grey darken-3"></section>
+        </div>
+        <section class="container">
+            <a class="waves-effect waves-light btn modal-trigger grey darken-3" href="#modal1">Weather Map</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-size">
+                <div class="modal-content center wrap">
+                    <a href="#!" class="modal-close btn-floating btn-small waves-effect waves-light red x-button">X</a>
+                    <iframe src="../../weather_map.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="2" class="html-frame"></iframe>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="divider-background" id="contact">
+            <section class="divider grey darken-3"></section>
+            <h4 class="ml-3">Contact</h4>
+            <section class="divider2 grey darken-3"></section>
+        </div>
+        <section class="container">
+            <header class="row">
+                <h1>Contact Me</h1>
+            </header>
+            <hr>
+            <form action="">
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">NAME</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">EMAIL</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3">
+                        <textarea id="message-area" class="materialize-textarea" style="height: 150px" rows="7"></textarea>
+                        <label for="message-area">MESSAGE</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 offset-m3">
+                        <button class="btn waves-effect waves-light grey darken-3 submit-button" type="submit" name="action">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+    <script src="personal-site.js"></script>
+</body>
+</html>
