@@ -297,6 +297,10 @@ hr {
     margin-left: 1rem;
 }
 
+.mt-3{
+    margin-top: 2rem;
+}
+
 .submit-button {
     width: 100%;
 }
@@ -305,3 +309,6 @@ hr {
     border-radius: 0;
 }
 
+fieldset{
+    all: unset;
+}
