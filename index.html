@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=KoHo|Slabo+27px" rel="stylesheet">
-    <link rel="stylesheet" href="personal-site.css">
+    <link rel="stylesheet" href="portfolio-project/personal-site.css">
 </head>
 <body>
 
@@ -94,23 +94,23 @@
                 <h1>Contact Me</h1>
             </header>
             <hr>
-            <form action="">
+            <form action="https://script.google.com/macros/s/AKfycbwDHFsqd7-zKk9QfR7jOB9L5b8C6Lq5mR6WYNraIrVM0aUCzHk/exec" class="gform" method="POST">
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
-                        <input id="name" type="text" class="validate">
+                        <input id="name" type="text" class="validate" name="name">
                         <label for="name">NAME</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
-                        <input id="email" type="text" class="validate">
+                        <input id="email" type="text" class="validate" name="email">
                         <label for="email">EMAIL</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
-                        <textarea id="message-area" class="materialize-textarea" style="height: 150px" rows="7"></textarea>
-                        <label for="message-area">MESSAGE</label>
+                        <textarea id="message" class="materialize-textarea" style="height: 150px" rows="7" name="message"></textarea>
+                        <label for="message">MESSAGE</label>
                     </div>
                 </div>
                 <div class="row">
@@ -120,6 +120,11 @@
                 </div>
             </form>
 
+            <div class="thankyou_message" style="display:none;">
+                <h2><em>Thanks</em> for contacting us!
+                    We will get back to you soon!</h2>
+            </div>
+
         </section>
     </div>
 
@@ -128,6 +133,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <script src="personal-site.js"></script>
+    <script src="portfolio-project/personal-site.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="portfolio-project/form-submission-handler.js"></script>
 </body>
 </html>

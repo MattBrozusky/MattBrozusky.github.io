@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
 :root {
     --main-bg: rgb(91 27 78);
     --main-text: rgb(207 43 0);
@@ -10,7 +13,6 @@ Header Animation Css
 Original design: https://codepen.io/mohaiman/pen/MQqMyo
 ***************************/
 
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 *{
     margin: 0;
