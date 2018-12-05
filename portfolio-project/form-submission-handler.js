@@ -55,7 +55,6 @@
         formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
         formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-        console.log(formData);
         return formData;
     }
 
@@ -83,18 +82,13 @@
             xhr.open('POST', url);
             // xhr.withCredentials = true;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            let thankYouMessage = form.querySelector(".thankyou_message");
             xhr.onreadystatechange = function() {
-                console.log(xhr.status, xhr.statusText);
-                console.log(xhr.responseText);
-                var formElements = form.querySelector(".form-elements")
-                if (formElements) {
-                    formElements.style.display = "none"; // hide form
-                }
-                var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
-                    thankYouMessage.style.display = "block";
+                    M.toast({html: 'Message was sent!', classes: 'message-sent'});
+                    thankYouMessage = '';
+                    return;
                 }
-                return;
             };
             // url encode form data for sending as post data
             var encoded = Object.keys(data).map(function(k) {
@@ -105,13 +99,12 @@
     }
 
     function loaded() {
-        console.log("Contact form submission handler loaded successfully.");
         // bind to the submit event of our form
         var forms = document.querySelectorAll("form.gform");
         for (var i = 0; i < forms.length; i++) {
             forms[i].addEventListener("submit", handleFormSubmit, false);
         }
-    };
+    }
     document.addEventListener("DOMContentLoaded", loaded, false);
 
     function disableAllButtons(form) {

@@ -17,7 +17,4 @@ $(document).ready(() => {
     $('.modal').modal();
 
 
-
-
-
 });
