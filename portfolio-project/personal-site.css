@@ -221,9 +221,24 @@ Page Divider
     overflow-x: hidden;
 }
 
-#about h4 {
+#portfolio h4 {
     text-align: right;
     margin-right: 1rem;
+}
+
+.slide-right {
+    position: relative;
+    left: -1600px;
+    -webkit-animation: slide 1.75s forwards;
+    animation: slide 1.75s forwards;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
 }
 
 
@@ -349,4 +364,64 @@ fieldset{
     top: 10px;
     width: 30px;
     height: auto;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+
+/*Name Fade In*/
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Progress Circles*/
+
+.progress-div {
+    width: 50%;
+    height: auto;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle, .circleback {
+    stroke: #212121;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.circleback {
+    stroke: #bdbdbd;
+}
+
+.circleText {
+    font-size:10px;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0, 20%;
+    }
 }
