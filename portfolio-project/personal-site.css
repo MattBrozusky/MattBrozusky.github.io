@@ -7,28 +7,22 @@
     --extra-color: #fdbb2d;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{font-family: 'Slabo 27px', serif;}
 
 /***************************
 Header Animation Css
 Original design: https://codepen.io/mohaiman/pen/MQqMyo
 ***************************/
 
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: 'Slabo 27px', serif;
-}
-
-
 .context {
     width: 100%;
     position: absolute;
     top:30vh;
-
 }
 
 .context h1{
@@ -36,7 +30,6 @@ body{
     color: #fff;
     font-size: 50px;
 }
-
 
 .area{
     background: linear-gradient(to bottom left, #1a237e, #b21f1f, #fdbb2d);
@@ -62,7 +55,6 @@ body{
     background: rgba(255, 255, 255, 0.4);
     animation: animate 25s linear infinite;
     bottom: -150px;
-
 }
 
 .circles li:nth-child(1){
@@ -71,7 +63,6 @@ body{
     height: 80px;
     animation-delay: 0s;
 }
-
 
 .circles li:nth-child(2){
     left: 10%;
@@ -141,8 +132,6 @@ body{
     animation-duration: 11s;
 }
 
-
-
 @keyframes animate {
 
     0%{
@@ -156,7 +145,6 @@ body{
         opacity: 0;
         border-radius: 50%;
     }
-
 }
 
 #header-img {
@@ -164,6 +152,19 @@ body{
     width: 18rem;
     height: auto;
 }
+
+/***************************
+Other Header css
+***************************/
+
+.wrapper-nav {height: 64px;}
+
+#down-arrow {
+    position: absolute;
+    right: 1%;
+}
+
+.material-icons{color: rgba(255, 255, 255, 1);}
 
 /***************************
 Page Divider
@@ -217,9 +218,7 @@ Page Divider
     height: 4em;
 }
 
-.main-container {
-    overflow-x: hidden;
-}
+.main-container {overflow-x: hidden;}
 
 #portfolio h4 {
     text-align: right;
@@ -233,135 +232,23 @@ Page Divider
     animation: slide 1.75s forwards;
 }
 
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
+@-webkit-keyframes slide { 100% { left: 0; } }
 
-@keyframes slide {
-    100% { left: 0; }
-}
+@keyframes slide { 100% { left: 0; } }
 
+.invisible{visibility: hidden;}
 
-/***************************
-Rest of Page
-***************************/
-hr {
-    position: relative;
-    -webkit-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg);
-    z-index: 10;
-    top: -3rem;
-    border: solid 0.5rem #424242;
-}
+/***********
+Nav Bar css
+***********/
 
-.wrapper-nav {
-    height: 64px;
-}
+.pushpin {z-index: 100;}
 
-.pushpin {
-    z-index: 100;
-}
+.pin-top {position: relative;}
 
-.pin-top {
-   position: relative;
-}
+.pin-bottom {position: relative;}
 
-
-.pin-bottom {
-   position: relative;
-}
-
-
-.pinned {
-   position: fixed !important;
-}
-
-.modal-size {
-    height: 40em;
-    width: 40em;
-}
-
-.x-button {
-    position: absolute;
-    right: 0.1%;
-    top: 0.2%;
-    padding: 0;
-}
-
-.wrap {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 0!important;
-    overflow: hidden;
-}
-
-.html-frame {
-    height: 167%;
-    width: 172%;
-    border: 0;
-
-    -ms-transform: scale(0.60);
-    -moz-transform: scale(0.60);
-    -o-transform: scale(0.60);
-    -webkit-transform: scale(0.60);
-    transform: scale(0.60);
-
-    -ms-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-
-.ml-3{
-    margin-left: 1rem;
-}
-
-.mt-3{
-    margin-top: 1rem;
-}
-
-.mt-4{
-    margin-top: 3rem;
-}
-
-.mb-3 {
-    margin-bottom: 1rem;
-}
-
-.submit-button {
-    width: 100%;
-}
-
-.btn {
-    border-radius: 0;
-}
-
-fieldset{
-    all: unset;
-}
-
-.message-sent {
-    border-radius: 0;
-    background-color: green;
-
-}
-
-#down-arrow {
-    position: absolute;
-    right: 1%;
-}
-
-.material-icons{
-    color: rgba(255, 255, 255, 1);
-}
-
-.img-frame-card {
-    padding: 1rem;
-    width: 100%;
-    height: 20rem;
-}
+.pinned {position: fixed !important;}
 
 .img-nav-bar {
     position: relative;
@@ -370,12 +257,11 @@ fieldset{
     height: auto;
 }
 
-.invisible{
-    visibility: hidden;
-}
+.nav-wrapper a:hover {background-color: rgba(255, 255, 255, 0.15);}
 
-
-/*Name Fade In*/
+/*************
+Name Fade In
+**************/
 .fade-in {
     opacity: 1;
     animation-name: fadeInOpacity;
@@ -393,10 +279,52 @@ fieldset{
     }
 }
 
+/************
+  Form css
+************/
 
-.carousel {
-    height: 260px; !important;
-    margin-top: 2rem;
+.submit-button {width: 100%;}
+
+.btn {border-radius: 0;}
+
+fieldset{all: unset;}
+
+.message-sent {
+    border-radius: 0;
+    background-color: green;
+
+}
+
+.img-frame-card {
+    padding: 1rem;
+    width: 100%;
+    height: 20rem;
+}
+
+/**************
+Margin Classes
+**************/
+
+.ajax-pic{margin-top: 32px;}
+
+.ml-3{margin-left: 1rem;}
+
+.mt-3{margin-top: 1rem;}
+
+.mt-4{margin-top: 3rem;}
+
+.mb-3 {margin-bottom: 1rem;}
+
+/***************************
+Rest of Page
+***************************/
+hr {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    z-index: 10;
+    top: -3rem;
+    border: solid 0.5rem #424242;
 }
 
 .about-style {
@@ -404,10 +332,7 @@ fieldset{
     color: black;
 }
 
-.nav-wrapper a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.ajax-pic{
-    margin-top: 32px;
+.carousel {
+    height: 260px; !important;
+    margin-top: 2rem;
 }
