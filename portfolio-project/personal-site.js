@@ -36,15 +36,15 @@ $(document).ready(() => {
         }
 
         //Divider's
-        if ($(window).scrollTop() > biography.offset().top - 530){
+        if ($(window).scrollTop() > biography.offset().top){
             biography.removeClass('invisible').addClass('slide-right');
         }
 
-        if ($(window).scrollTop() > portfolio.offset().top - 530){
+        if ($(window).scrollTop() > portfolio.offset().top){
             portfolio.removeClass('invisible').addClass('slide-right');
         }
 
-        if ($(window).scrollTop() > contact.offset().top - 530){
+        if ($(window).scrollTop() > contact.offset().top){
             contact.removeClass('invisible').addClass('slide-right');
         }
 
