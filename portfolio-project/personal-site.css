@@ -395,7 +395,7 @@ fieldset{
 
 
 .carousel {
-    height: 220px; !important;
+    height: 260px; !important;
     margin-top: 2rem;
 }
 
@@ -406,4 +406,8 @@ fieldset{
 
 .nav-wrapper a:hover {
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ajax-pic{
+    margin-top: 32px;
 }
