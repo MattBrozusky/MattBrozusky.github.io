@@ -54,13 +54,6 @@ $(document).ready(() => {
         }
     });
 
-//Smooth Scroll
-    $('a').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $( $(this).attr('href') ).offset().top
-        },800);
-    });
-
     function makeArrow() {
         let headerHeight = $('#header').height();
         $('#down-arrow').css('top', headerHeight - 60);
