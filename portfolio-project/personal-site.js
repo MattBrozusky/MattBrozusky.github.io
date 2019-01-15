@@ -49,7 +49,7 @@ $(document).ready(() => {
         animateCards($('.projectCards3'));
 
         //Name Appear
-        if ($(window).scrollTop() > biography.offset().top - 100){
+        if ($(window).scrollTop() > $('#biography').offset().top - 100){
             $('#my-name').removeClass('invisible').addClass('fade-in');
         }
     });
