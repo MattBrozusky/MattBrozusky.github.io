@@ -24,7 +24,7 @@ $(document).ready(() => {
 //Scrolling animations
     $(window).bind('scroll', function() {
         let downArrow = $('#down-arrow');
-        let biography = $('#biography');
+        let aboutMe = $('#aboutMe');
         //Arrow
         if ($(window).scrollTop() > 100) {
             downArrow.fadeOut(300);
@@ -34,8 +34,8 @@ $(document).ready(() => {
         }
 
         //About me
-        if ($(window).scrollTop() > biography.offset().top - $(window).height()){
-            biography.removeClass('invisible').addClass('fade-in');
+        if ($(window).scrollTop() > aboutMe.offset().top - $(window).height()){
+            aboutMe.removeClass('invisible').addClass('fade-in');
         }
 
         //Project Cards
