@@ -25,8 +25,6 @@ $(document).ready(() => {
     $(window).bind('scroll', function() {
         let downArrow = $('#down-arrow');
         let biography = $('#biography');
-        let contact = $('#contact');
-        let portfolio = $('#portfolio');
         //Arrow
         if ($(window).scrollTop() > 100) {
             downArrow.fadeOut(300);
@@ -35,18 +33,20 @@ $(document).ready(() => {
             downArrow.fadeIn(300);
         }
 
-        //Divider's
+        //About me
         if ($(window).scrollTop() > biography.offset().top - $(window).height()){
-            biography.removeClass('invisible').addClass('slide-right');
+            biography.removeClass('invisible').addClass('fade-in');
         }
 
-        if ($(window).scrollTop() > portfolio.offset().top - $(window).height()){
-            portfolio.removeClass('invisible').addClass('slide-right');
+        //Project Cards
+        function animateCards(card) {
+            if ($(window).scrollTop() > (card.offset().top + 50) - $(window).height()){
+                card.removeClass('invisible').addClass('fade-bottom');
+            }
         }
-
-        if ($(window).scrollTop() > contact.offset().top - $(window).height()){
-            contact.removeClass('invisible').addClass('slide-right');
-        }
+        animateCards($('.projectCards1'));
+        animateCards($('.projectCards2'));
+        animateCards($('.projectCards3'));
 
         //Name Appear
         if ($(window).scrollTop() > biography.offset().top - 100){

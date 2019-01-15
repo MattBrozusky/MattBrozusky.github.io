@@ -227,19 +227,6 @@ Page Divider
     margin-right: 1rem;
 }
 
-.slide-right {
-    position: relative;
-    left: -1600px;
-    -webkit-animation: slide 1.75s forwards;
-    animation: slide 1.75s forwards;
-}
-
-@-webkit-keyframes slide { 100% { left: 0; } }
-
-@keyframes slide { 100% { left: 0; } }
-
-.invisible{visibility: hidden;}
-
 /***********
 Nav Bar css
 ***********/
@@ -262,14 +249,14 @@ Nav Bar css
 .nav-wrapper a:hover {background-color: rgba(255, 255, 255, 0.15);}
 
 /*************
-Name Fade In
+CSS Animations
 **************/
 .fade-in {
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }
 
 @keyframes fadeInOpacity {
@@ -278,6 +265,23 @@ Name Fade In
     }
     100% {
         opacity: 1;
+    }
+}
+
+
+.fade-bottom {
+    animation-name: fade-bottom;
+    animation-duration: 1.3s;
+}
+
+@keyframes fade-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -338,3 +342,5 @@ hr {
     height: 310px; !important;
     margin-top: 2rem;
 }
+
+.invisible{visibility: hidden;}
