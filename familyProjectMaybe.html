@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .separator {
+            margin-top: 200px;
+        }
+
+        .twitter {
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 4px;
+            background: #00ACED;
+            display: inline-block;
+            padding: 10px 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* 3D Cube */
+        .space3d {
+            perspective: 1000px;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        ._3dbox {
+            display: inline-block;
+            transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(-15deg) rotateY(15deg);
+        }
+
+        ._3dface {
+            overflow: hidden;
+            position: absolute;
+            border: 1px solid #888;
+            background: #FFF;
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+            color: #333;
+            line-height: 300px;
+            opacity: 0.8;
+        }
+
+        ._3dface--front {
+            width: 300px;
+            height: 300px;
+            transform: translate3d(0, 0, 150px);
+        }
+
+        ._3dface--top {
+            width: 300px;
+            height: 300px;
+            transform: rotateX(90deg) translate3d(0, 0, 150px);
+        }
+
+        ._3dface--bottom {
+            width: 300px;
+            height: 300px;
+            transform: rotateX(-90deg) translate3d(0, 0, 150px);
+        }
+
+        ._3dface--left {
+            width: 300px;
+            height: 300px;
+            left: 50%;
+            margin-left: -150px;
+            transform: rotateY(-90deg) translate3d(0, 0, 150px);
+        }
+
+        ._3dface--right {
+            width: 300px;
+            height: 300px;
+            left: 50%;
+            margin-left: -150px;
+            transform: rotateY(90deg) translate3d(0, 0, 150px);
+        }
+
+        ._3dface--back {
+            width: 300px;
+            height: 300px;
+            transform: rotateY(180deg) translate3d(0, 0, 150px);
+        }
+
+        #radio-left:checked ~ .space3d ._3dbox {
+            transform: rotateY(90deg);
+        }
+
+        #radio-right:checked ~ .space3d ._3dbox {
+            transform: rotateY(-90deg);
+        }
+
+        #radio-bottom:checked ~ .space3d ._3dbox {
+            transform: rotateX(90deg);
+        }
+
+        #radio-top:checked ~ .space3d ._3dbox {
+            transform: rotateX(-90deg);
+        }
+
+        #radio-back:checked ~ .space3d ._3dbox {
+            transform: rotateY(180deg);
+        }
+
+        ._3dface--front {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/51933313_10212815132199790_7138751475819216896_o.jpg?_nc_cat=103&_nc_oc=AQlkTUfjOg_ETND2lIB2FdOTe4HahiGpm8w0AI_NkpE555AYoMxGzM36xLGnIxpxxLkBSTlya6EsUEp6hisXI3FV&_nc_ht=scontent-dfw5-1.xx&oh=c58ead12de6b527588a094a51898d54a&oe=5D1456C8);
+            background-size: 100%;
+        }
+
+        ._3dface--left {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/48425722_10214189870000829_521667311887712256_o.jpg?_nc_cat=104&_nc_oc=AQlGkBTWA_Z_O8EX5bw1VuKHvlnIsf3gtN3ZK9ykwoWFAwyWb8uV9KIQeEBZn7WaPEspDyDJR78NmvPfKp91rs5y&_nc_ht=scontent-dfw5-1.xx&oh=71ea9ee32200a3090761ef9c43a8e9af&oe=5D09C4EC);
+            background-size: auto 100%;
+        }
+
+        ._3dface--right {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/21271023_10209540475295414_4801408356222349589_n.jpg?_nc_cat=101&_nc_oc=AQk3w2Tg-HTR2KZRBK0PvAKrKOT-IYk4GtoraAd4J-RNuFgklB62qREEqbz7YcRp0NdDBzklUEI5pzL6h_PBnP2D&_nc_ht=scontent-dfw5-1.xx&oh=fed39db8464f90f771e2e6857b218df6&oe=5D4C175C);
+            background-size: auto 100%;
+        }
+
+        ._3dface--top {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/62531_1393610646962_1264271_n.jpg?_nc_cat=104&_nc_oc=AQkUw8Rq_OdJkxanhk3qxqcEAa0ZzHK-a9Wo14oB0PF_pYJ-2dSN3CiIZ6cisIg7wjn2-TqZ4-BFVTEoYR0mipQA&_nc_ht=scontent-dfw5-1.xx&oh=8f96930b7f72c1753355854c1d77e448&oe=5D4EDD76);
+            background-size: auto 100%;
+        }
+
+        ._3dface--bottom {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/50766658_10214402277990896_6047741048610881536_o.jpg?_nc_cat=109&_nc_oc=AQkWPSYXcvh8kU9GBFYayuWNVmceu8lAV39SMTb3TCeEWqARQLiTWM-dPuLxwVRdyHIBpYYV4BUd4renQjmY9zhX&_nc_ht=scontent-dfw5-1.xx&oh=423ac828c01e084b1544dce4a6440d3e&oe=5D11EDEC);
+            background-size: auto 100%;
+        }
+
+        ._3dface--back {
+            background: url(https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/48415349_10214163655785490_5936948699308490752_o.jpg?_nc_cat=110&_nc_oc=AQlsUjKbuIpAOfUg-CeJjIr9QxeFwuN2EzDSMMlfabeGEr2FFycuEpFO6hWekDIi3v8mAov861ktXHK-VTTgR1i7&_nc_ht=scontent-dfw5-1.xx&oh=f27744b31fb64df73db60b78b160e3a6&oe=5D0BDB5E);
+            background-size: auto 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- CONTROLS -->
+
+<input type="radio" checked id="radio-front" name="select-face"/>
+<input type="radio" id="radio-left" name="select-face"/>
+<input type="radio" id="radio-right" name="select-face"/>
+<input type="radio" id="radio-top" name="select-face"/>
+<input type="radio" id="radio-bottom" name="select-face"/>
+<input type="radio" id="radio-back" name="select-face"/>
+
+<div class="separator"></div>
+
+
+<div class="space3d">
+
+
+    <div class="_3dbox">
+        <div class="_3dface _3dface--front"></div>
+        <div class="_3dface _3dface--top"></div>
+        <div class="_3dface _3dface--bottom"></div>
+        <div class="_3dface _3dface--left"></div>
+        <div class="_3dface _3dface--right"></div>
+        <div class="_3dface _3dface--back"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
